@@ -1,0 +1,36 @@
+@import "./scss-variables";
+
+html {
+  background-color: var(--background-color);
+  box-sizing: border-box;
+  color: var(--text-color);
+  font-family: "Nunito Sans", sans-serif;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin: 0;
+}
+
+a {
+  color: var(--text-color);
+  text-decoration: none;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+.container {
+  margin: 0 auto;
+  max-width: 1140px;
+  min-height: 100vh;
+  padding: $s-spacing;
+}

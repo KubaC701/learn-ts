@@ -1,0 +1,8 @@
+@import "../../../styles/scss-variables";
+
+.base-label {
+  color: var(--accent-color);
+  display: block;
+  font-weight: 600;
+  margin: 0 0 $xs-spacing;
+}

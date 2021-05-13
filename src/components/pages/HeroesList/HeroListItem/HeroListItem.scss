@@ -1,0 +1,81 @@
+@import "../../../../styles/scss-variables";
+@import "../../../../styles/mixins";
+
+.hero-list-item {
+  background-color: var(--background-color--light);
+  border-radius: $border-radius;
+  margin-bottom: $xs-spacing;
+  padding: $s-spacing;
+
+  &__card {
+    @include reset-default-button;
+    padding: 0;
+    text-align: left;
+    width: 100%;
+  }
+
+  &__details {
+    align-items: center;
+    display: flex;
+
+    &--desktop {
+      display: none;
+    }
+  }
+
+  &__avatar {
+    border-radius: 100%;
+    height: $l-spacing;
+    margin-right: $s-spacing;
+    max-width: $l-spacing;
+    width: $l-spacing;
+  }
+
+  &__name {
+    font-size: $s-spacing;
+    font-weight: 700;
+  }
+
+  &__type {
+    &--desktop {
+      display: none;
+    }
+  }
+
+  &__description {
+    margin-top: $s-spacing;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+
+  @media (min-width: $tablet-breakpoint) {
+    &__card {
+      align-items: center;
+      display: flex;
+      justify-content: space-between;
+
+      * {
+        flex: 1;
+      }
+    }
+
+    &__details {
+      display: none;
+
+      &--desktop {
+        display: flex;
+      }
+    }
+
+    &__type {
+      &--desktop {
+        display: block;
+      }
+    }
+
+    &__description {
+      margin-top: 0;
+    }
+  }
+}

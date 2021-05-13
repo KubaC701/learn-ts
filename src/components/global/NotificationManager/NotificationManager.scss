@@ -1,0 +1,14 @@
+@import "../../../styles/scss-variables";
+
+.notification-manager {
+  left: $s-spacing;
+  position: absolute;
+  top: $s-spacing;
+  width: calc(100% - #{$s-spacing * 2});
+
+  @media (min-width: $mobile-breakpoint) {
+    left: unset;
+    max-width: 300px;
+    right: $s-spacing;
+  }
+}

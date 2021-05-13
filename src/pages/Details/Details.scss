@@ -1,0 +1,38 @@
+@import "../../styles/scss-variables";
+
+.details {
+  &__avatar {
+    border-radius: 100%;
+    display: block;
+    height: $l-spacing;
+    margin: 0 auto $s-spacing;
+    width: $l-spacing;
+  }
+
+  &__content {
+    height: calc(100% - #{$m-spacing * 2});
+  }
+
+  &__name {
+    font-size: $s-spacing * 1.2;
+    text-align: center;
+  }
+
+  &__type {
+    font-size: $s-spacing;
+    font-weight: 400;
+    margin-bottom: $m-spacing;
+    text-align: center;
+  }
+
+  &__delete {
+    color: var(--error-color);
+    display: flex;
+    font-weight: 700;
+    margin: $s-spacing auto 0;
+  }
+
+  @media (min-width: $tablet-breakpoint) {
+    height: auto;
+  }
+}

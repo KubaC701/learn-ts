@@ -1,0 +1,81 @@
+@import "../../../styles/scss-variables";
+@import "../../../styles/mixins";
+
+.base-button {
+  @include reset-default-button;
+  align-items: center;
+  border: 2px solid transparent;
+  border-radius: $border-radius;
+  color: var(--text-color);
+  display: inline-flex;
+  font-weight: 600;
+  justify-content: center;
+  min-width: 120px;
+  padding: $xs-spacing $s-spacing;
+  text-decoration: none;
+  transition: all $time--short ease-in-out;
+
+  &--primary {
+    background-color: var(--primary-color);
+    color: var(--background-color--light);
+
+    &:active {
+      background-color: var(--primary-color--dark);
+    }
+
+    &:focus {
+      border-color: var(--primary-color--dark);
+    }
+  }
+
+  &--cta {
+    background-color: var(--cta-color);
+    color: var(--background-color--light);
+
+    &:active {
+      background-color: var(--cta-color--dark);
+    }
+
+    &:focus {
+      border-color: var(--cta-color--dark);
+    }
+  }
+
+  &--outline {
+    background-color: transparent;
+    border-color: var(--primary-color);
+    color: var(--primary-color);
+
+    &:active {
+      background-color: var(--background-color--dark);
+    }
+
+    &:focus {
+      border-color: var(--primary-color--dark);
+    }
+  }
+
+  &--text {
+    background-color: transparent;
+
+    &:active {
+      background-color: var(--background-color--dark);
+    }
+
+    &:focus {
+      border-color: var(--background-color--dark);
+    }
+  }
+
+  &__icon {
+    height: $s-spacing;
+    margin-right: $xs-spacing;
+    width: $s-spacing;
+
+    img,
+    svg {
+      height: 100%;
+      width: 100%;
+    }
+  }
+}

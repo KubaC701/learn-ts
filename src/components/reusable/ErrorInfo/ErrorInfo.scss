@@ -1,0 +1,17 @@
+@import "../../../styles/scss-variables";
+
+.error-info {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+
+  &__icon {
+    height: $l-spacing;
+    width: $l-spacing;
+  }
+
+  &__message {
+    color: var(--error-color);
+    font-weight: 600;
+  }
+}

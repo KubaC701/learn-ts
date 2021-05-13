@@ -1,0 +1,30 @@
+@import '../../../styles/scss-variables';
+@import '../../../styles/mixins';
+
+.base-notification {
+  align-items: center;
+  border: 1px solid transparent;
+  border-radius: $border-radius;
+  color: var(--background-color--light);
+  display: flex;
+  justify-content: center;
+  margin-bottom: $xs-spacing;
+  padding: $s-spacing;
+  position: relative;
+
+  &--success {
+    background-color: var(--cta-color);
+    box-shadow: 0 10px 20px rgba(#62cd95, 0.3);
+  }
+  
+  &--error {
+    background-color: var(--error-color);
+    box-shadow: 0 10px 20px rgba(#f15c6e, 0.3);
+  }
+
+  &__status-icon {
+    height: $m-spacing;
+    margin-right: $xs-spacing;
+    width: $m-spacing;
+  }
+}

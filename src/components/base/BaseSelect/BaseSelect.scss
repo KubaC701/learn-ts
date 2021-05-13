@@ -1,0 +1,31 @@
+@import "../../../styles/scss-variables";
+@import "../../../styles/mixins";
+
+.base-select {
+  position: relative;
+
+  &__inner {
+    background-color: var(--background-color--light);
+    border: 2px solid transparent;
+    border-radius: $border-radius;
+    padding: $xs-spacing;
+    transition: border-color $time;
+    width: 100%;
+
+    &:focus {
+      border-color: var(--primary-color);
+    }
+
+    &--error {
+      border-color: var(--error-color);
+    }
+  }
+
+  &__error {
+    bottom: -$s-spacing;
+    color: var(--error-color);
+    font-size: $xs-spacing;
+    font-weight: 600;
+    position: absolute;
+  }
+}
